@@ -1,4 +1,4 @@
-<h1>Rolling <%= number_of_dice %> <%= number_of_sides %>-sided dice</h1>
+<h1><%= @number_of_dice %>d<%= @number_of_sides %></h1>
 <ul>
   <% @rolls.each do |result| %>
     <li><%= result %></li>

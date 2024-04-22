@@ -48,11 +48,10 @@ def five_four
 end
 
 def roll_dice
-  number_of_dice = params[:number_of_dice].to_i
-  number_of_sides = params[:number_of_sides].to_i
-  @rolls = Array.new(number_of_dice) { rand(1..number_of_sides) }
+  @number_of_dice = params[:number_of_dice].to_i
+  @number_of_sides = params[:number_of_sides].to_i
+  @rolls = Array.new(@number_of_dice) { rand(1..@number_of_sides) }
 
-  # This should match the name of your view template
   render({ template: "roll_templates/roll_dice" })
 end
 
